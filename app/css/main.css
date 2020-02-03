@@ -463,7 +463,7 @@ li {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .section {
@@ -477,6 +477,11 @@ li {
 .article {
   width: 364px;
   height: 376px;
+  border-radius: 8px 0px 8px 8px;
+}
+
+.article-tab {
+  display: none;
 }
 
 .article-big {
@@ -497,7 +502,7 @@ li {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0px 16px 0 8px;
+  padding: 0px 13px 0 8px;
   margin-bottom: 8px;
 }
 
@@ -578,8 +583,8 @@ li {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 0px 16px 0 8px;
-  margin-bottom: 10px;
+  padding: 0px 9px 0 8px;
+  margin-bottom: 4px;
 }
 
 .info__sity {
@@ -601,6 +606,14 @@ li {
 
 .info__text {
   padding-left: 8px;
+}
+
+.info__text a span {
+  display: none;
+}
+
+.info__text a br {
+  display: none;
 }
 
 .info__text a {
@@ -635,7 +648,12 @@ li {
 }
 
 .article__content {
-  margin-bottom: 10px;
+  margin-bottom: 6px;
+  border-radius: 8px 0px 8px 8px;
+}
+
+.article__content img {
+  border-radius: 8px 0px 8px 8px;
 }
 
 .content_fon {
@@ -667,6 +685,7 @@ li {
   display: block;
   padding: 10px 0;
   margin: 0 auto;
+  letter-spacing: 0.07em;
 }
 
 .button:hover {
@@ -713,17 +732,29 @@ li {
     -ms-flex-pack: distribute;
     justify-content: space-around;
   }
+
+  .article-tab {
+    display: block;
+  }
+
+  .article-desc {
+    display: none;
+  }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 790px) {
   .article-block-2,
   .article-wrap {
     display: block;
   }
 
+  .articles {
+    margin-bottom: 64px;
+  }
+
   .article {
     height: auto;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 13px auto;
   }
 
   .content__img {
@@ -759,15 +790,39 @@ li {
     line-height: 24px;
   }
 
+  .info__text a span {
+    display: inherit;
+    font-weight: 700;
+  }
+
+  .info__text a br {
+    display: block;
+  }
+
   .button {
     width: 288px;
     font-size: 16px;
+  }
+
+  .poster__editorial-staff a {
+    font-size: 10px;
+    line-height: 9px;
+    padding: 3px 6px;
+  }
+
+  .content__date {
+    top: 11px;
+    right: 12px;
+  }
+
+  .article__poster {
+    padding: 0px 11px 0 8px;
   }
 }
 
 @media only screen and (max-width: 576px) {
   .article {
-    width: 280px;
+    width: 288px;
   }
 
   .content__picture img {
@@ -775,13 +830,13 @@ li {
   }
 
   .content_fon-2 {
-    height: 180px;
+    height: 186px;
   }
 
   .content__picture-text {
     font-size: 26px;
     line-height: 28px;
-    padding: 10px 0 0 10px;
+    padding: 17px 0 0 16px;
     width: 190px;
   }
 }
